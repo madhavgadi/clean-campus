@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Campus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#">Clean<span>Campus</span></a><nav><a href="#report">Report waste</a><a href="#leaderboard">Leaderboard</a></nav><button id="logout" class="outline hidden">Log out</button></header>
+  <main>
+    <section class="hero"><p class="eyebrow">A CLEANER CAMPUS STARTS WITH US</p><h1>See it. Report it.<br><span>Keep campus clean.</span></h1><p>Help your campus team identify waste hotspots and encourage positive action.</p></section>
+    <section id="auth" class="auth section">
+      <div><h2>Welcome to Clean Campus</h2><p class="muted">Enter a name and email to use this demo. Your session is stored only in this browser.</p></div>
+      <form id="login-form"><label>Your name<input id="name" required maxlength="40" placeholder="e.g. Madhav"></label><label>Email address<input id="email" type="email" required placeholder="you@example.com"></label><button class="primary" type="submit">Continue</button></form>
+    </section>
+    <div id="app" class="hidden">
+      <section class="section stats"><div><p class="eyebrow">CAMPUS IMPACT</p><h2>Small actions make a difference</h2></div><div class="stat"><strong id="report-count">0</strong><span>Reports submitted</span></div><div class="stat"><strong id="people-count">0</strong><span>Community members</span></div></section>
+      <section id="report" class="section report-layout">
+        <div><p class="eyebrow">TAKE ACTION</p><h2>Report a waste issue</h2><p class="muted">Share the location and type of waste so the campus team can follow up.</p>
+          <form id="report-form">
+            <label>Location<input id="location" required maxlength="80" placeholder="e.g. Near the library"></label>
+            <label>Type of waste<select id="waste-type" required><option value="">Choose a category</option><option>Plastic waste</option><option>Food waste</option><option>Paper waste</option><option>Mixed waste</option><option>Other</option></select></label>
+            <label>Description<textarea id="description" required maxlength="300" rows="4" placeholder="Describe what you noticed..."></textarea></label>
+            <button class="primary" type="submit">Submit report</button>
+          </form>
+        </div>
+        <div class="tips"><h3>Quick reminders</h3><p>♻️ Separate recyclable materials where possible.</p><p>🗑️ Use the correct waste bins.</p><p>📍 Give a clear location in every report.</p><p>🤝 Respect shared campus spaces.</p></div>
+      </section>
+      <section class="section"><p class="eyebrow">COMMUNITY ACTIVITY</p><h2>Recent reports</h2><div id="reports-list" class="reports-list"></div></section>
+      <section id="leaderboard" class="section"><p class="eyebrow">GET INVOLVED</p><h2>Community leaderboard</h2><p class="muted">Ranked by the number of reports submitted in this demo.</p><div id="leaderboard-list"></div></section>
+    </div>
+  </main>
+  <footer>Clean Campus · Student project demo</footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
